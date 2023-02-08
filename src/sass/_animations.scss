@@ -1,0 +1,56 @@
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        // box-shadow: 5px 5px 10px black;
+    }
+
+    to {
+        transform: scale(1.1);
+        // box-shadow: 15px 15px 15px black;
+    }
+
+}
+
+@keyframes fade {
+    0% {
+
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0
+    }
+
+    100% {
+
+        opacity: 0;
+    }
+
+
+}
+
+@keyframes menu4 {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.6);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+
+    }
+}
