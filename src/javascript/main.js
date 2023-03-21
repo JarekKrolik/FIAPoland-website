@@ -15,8 +15,6 @@ const menuElementDropboxDesktop = document.querySelectorAll(".drop_menu");
 const numberOfPhotos = 112;
 const numberOfVideos = 6;
 
-console.log(menuElementDropboxDesktop, "sialal");
-
 const membersDescriptionFunction = (e) => {
   membersDescriptionsOff = document.querySelectorAll(".member-button--off");
   e.target.parentElement.parentElement
@@ -104,15 +102,15 @@ menuElementDropboxDesktop.forEach((element) => {
   element.addEventListener("click", (e) => {
     if (e.target.children.length === 3) {
       const menuElements2 = e.target.children[2].querySelectorAll(".right-ul");
+      console.log(menuElements2);
       menuElements2.forEach((element) => element.classList.toggle("on"));
     }
     if (e.target.children.length === 1) {
       const menuElements = e.target.children[0].querySelectorAll(".right-ul");
+      console.log(menuElements);
       menuElements.forEach((element) => element.classList.toggle("on"));
     }
   });
 });
-
-// console.log(membersDescriptionsOff);
 
 BackgroundChanger();

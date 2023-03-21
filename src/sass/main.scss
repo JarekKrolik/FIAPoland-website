@@ -161,7 +161,6 @@ html {
 ///// Navigation ////////
 .navigation {
 
-    overflow: hidden;
 
     &__desktop {
         display: none;
@@ -906,6 +905,9 @@ a {
 
 ///////////////////////////////////////////////////////////////////// interview main
 .intervContainer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -914,6 +916,8 @@ a {
 
 
     .interview {
+        overflow: hidden;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -985,6 +989,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 
     a {
         color: $darkgold;
@@ -1520,13 +1525,13 @@ a {
 
     .navigation {
         overflow: visible;
-        // z-index: 999;
+       
 
         &__desktop {
 
-.right-ul.on{
+   .right-ul.on{
     display: block;
-     animation: menu4 .5s forwards;
+    animation: menu4 .5s forwards;
 
 }
 
@@ -1551,9 +1556,12 @@ a {
                 transition: background-color .3s,
                     box-shadow .3s,
                     color .3s;
-span{ font-size: 70%;color: $darkgold;text-align: center;display: block;
-}
-                  
+                  span{ font-size: 70%;color: $darkgold;text-align: center;display: block;}
+                                                                                            
+                  &.container.drop_menu{
+                    position: relative;
+                    overflow: visible;
+                  }
 
                 &.container {
 
@@ -1586,13 +1594,14 @@ span{ font-size: 70%;color: $darkgold;text-align: center;display: block;
 
 
                 ul.dropbox {
+                    display: block;
                     position: absolute;
+                    z-index: 99999999999;
                     left: 0;
                     top: 100%;
+                    height: 100%;
                     list-style: none;
                     width: 100%;
-                    // height: 60%;
-
                     text-align: center;
 
 
@@ -1601,10 +1610,12 @@ span{ font-size: 70%;color: $darkgold;text-align: center;display: block;
 
 
                     li {
-                        position: relative;
+                      
                         cursor: pointer;
+                        
+                        z-index: 100;
                         // margin-top: 0.1em;
-
+                        //  width: 50px;
                         display: none;
                         text-decoration: none;
                         // padding: 1.2em;
@@ -1639,7 +1650,7 @@ span{ font-size: 70%;color: $darkgold;text-align: center;display: block;
                             li {
 
 
-                                // height: 60%;
+                                height: 60%;
                                 display: none;
                                 text-align: left;
                                 padding: 0.1;
@@ -1650,6 +1661,8 @@ span{ font-size: 70%;color: $darkgold;text-align: center;display: block;
                         }
 
                     }
+
+                    li.on{display: block;}
 
 
                 }
